@@ -47,7 +47,7 @@ li a
 
 li a:hover 
 {
-  background-color: #111111;
+  background-color: #101000;
 }
 
 
@@ -55,7 +55,7 @@ li a:hover
 #kart
 {
 	float: right;
-	background-color: green;
+	background-color: #00853F;
 	margin:0;
 	padding:0;
 }
@@ -71,10 +71,25 @@ li a:hover
 #login
 {
 	float: right;
-	background-color: green;
+	background-color: #00853F;
 	margin:0;
 	padding:0;
 
+}
+
+#BarT
+{
+	float: left;
+	margin:7px;
+	padding:7px;
+}
+
+#lupa
+{
+	float:left;
+	background-color: #eeeeee;
+	margin:0;
+	padding:0;
 }
 
 .stand
@@ -115,3 +130,23 @@ footer
 	color: green;
 	font-size: 30px;
 }
+
+.blank_field
+{
+	background-color:white;
+	min-height:400px;
+	margin-left: 140px;
+	margin-right: 140px;
+	padding:70px;
+	text-align:center;
+}
+
+.buyers_area
+{
+	background-color: #E15344;
+	padding:15px;
+}
+
+.titlebox
+{
+	background-color:;
