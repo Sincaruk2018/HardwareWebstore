@@ -19,6 +19,15 @@
 	font-size: 100%;
 }
 
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
 .centered{
 	display: flex;
 	align-items: center;
@@ -37,6 +46,7 @@
 	flex-flow: row nowrap;
 	align-items: stretch;
 	justify-content: space-between;
+	z-index: 900;
 }
 
 #logo
