@@ -1,0 +1,26 @@
+.price
+{
+	color: green;
+	font-size: 30px;
+}
+
+.blank_field
+{
+	background-color:white;
+	min-height:400px;
+	margin-left: 140px;
+	margin-right: 140px;
+	padding:70px;
+	text-align:center;
+}
+
+.buyers_area
+{
+	background-color: #E15344;
+	padding:15px;
+}
+
+.titlebox
+{
+	background-color: #D94838;
+}
