@@ -14,7 +14,8 @@ Grupo de WebDev
 **Diagram**
 ![Diagram](diagram.png)
 
-**Medium-High Fidelity Mockup**
+**Medium-High Fidelity Mockup:**
+
 [Mockups](https://www.figma.com/proto/Fwt6kR6XM6HhqzZK6LvhAx/Medium-High-Fidelity-Mockup?node-id=6%3A2&scaling=min-zoom&page-id=0%3A1)
 
 **Requirements:**
