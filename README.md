@@ -11,6 +11,8 @@ Grupo de WebDev
 | Maurílio da Motta Meireles | 10734501 |
 | Vitor Kodhi Teruya | 10284441 |
 
+[Mockups](https://www.figma.com/proto/Fwt6kR6XM6HhqzZK6LvhAx/Medium-High-Fidelity-Mockup?node-id=6%3A2&scaling=min-zoom&page-id=0%3A1)
+
 **Requirements:**
 
 - There will be 2 types of users, Clients and Administrators.
