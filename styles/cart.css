@@ -1,0 +1,28 @@
+#cart-body{
+    margin: 150px auto 0 auto;
+    min-width: 800px;
+}
+
+.cart-item{
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cart-item img{
+    height: 100%;
+}
+
+.item-price{
+    margin-bottom: 10px;
+}
+
+.item-infos{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
