@@ -37,7 +37,7 @@
     align-items: flex-start;
 }
 
-.bottom-info{
+#button-buy{ /* Changed from botton-info*/
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
