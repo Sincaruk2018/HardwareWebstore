@@ -11,6 +11,7 @@
     <title>Hardware Express</title>
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <header>
 		<nav class = "navbar">
 			<a href="home.html" target="_self" id="logo" class="centered"> <h1 id="store-name">Hardware Express</h1> </a>
@@ -57,9 +58,30 @@
                     Portas: 1 x HDMI, 1 x Dual-link DVI-I |
                 </p>
             </div>
-            <div class="bottom-info">
+            
+            <div id="button-buy" v-bind:id = "btnCompra" v-on:click = "putOnCart()"> <!-- Changed from class="bottom-info" -->
                 <span class="product-price">$200</span>
-                <a href="cart.html" target="_self" class="button-to-cart"> Adicionar ao carrinho </a>
+                <div class="button-to-cart"> Adicionar ao carrinho </div>
+                <p id = "teste">{{preco}}</p>
+            <script>
+                var app = new Vue(
+                {
+                    el: "#button-buy",
+                    data:
+                    {
+                       preco: 0.00,
+                       btnCompra: "comprar"
+                    },
+                    methods:
+                    {
+                        putOnCart()
+                        {
+                            //preco = Number(preco) + 200.00;
+                            alert(preco);
+                        }
+                    }
+                });
+                </script>
             </div>
         </div>
     </main>
