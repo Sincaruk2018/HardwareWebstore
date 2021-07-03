@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/Cart.css";
 
@@ -92,10 +93,10 @@ function Cart() {
 
         </div>
 
-        <div id="cart-end">
-          <a href="buying.html" target="_self">
+        <div id="cart-end" className="centered">
+          <Link to="/payment">
             Finalizar Compra
-          </a>
+          </Link>
         </div>
 
       </main>

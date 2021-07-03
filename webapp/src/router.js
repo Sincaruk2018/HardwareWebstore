@@ -28,7 +28,7 @@ function Router() {
           <Store />
         </Route>
 
-        <Route exact path="/product">
+        <Route exact path="/product/:id">
           <Product />
         </Route>
 

@@ -1,10 +1,17 @@
 #cart-panel{
     width: 80vw;
     background: gainsboro;
+    margin-bottom: 50px;
 }
 
 #cart-head{
-background: crimson;
+    padding: 20px;
+    font-size: 3em;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #cart-body{
@@ -15,7 +22,12 @@ background: crimson;
 }
 
 #cart-end{
-    background: aquamarine;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: var(--dark-accept-color);
 }
 
 .cart-item{

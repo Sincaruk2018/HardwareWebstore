@@ -1,11 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 
 import "../styles/Store.css";
 
 import placaDeVideo from "../assets/placadevideo.jpg";
 
 function Store() {
+  const produtos = [
+    {
+      id: 1,
+      name: "GPU Nvidia Geforce 700 series 2GB",
+      price: "700",
+    },
+
+    {
+      id: 2,
+      name: "GPU Quase Geforce 1005 1GB",
+      price: "300",
+    },
+  ];
+
   return (
     <main id="main-store">
       <div className="filters">
@@ -27,71 +41,15 @@ function Store() {
       </div>
 
       <div className="stand-store">
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
-
-        <Link to="/product" className="card">
-          <img className="card-image" src={placaDeVideo} alt="product" />
-          <span className="card-name">GPU Nvidia Geforce 700 series 2GB</span>
-          <span className="card-price">$200</span>
-        </Link>
+        {produtos.map((produto) => 
+          <ProductCard
+            id={produto.id}
+            productImage={placaDeVideo}
+            productName={produto.name}
+            productPrice={produto.price}
+          />
+        )}
+        
       </div>
     </main>
   );
