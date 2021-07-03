@@ -24,11 +24,11 @@ function Router() {
           <Home />
         </Route>
 
-        <Route exact path="/store">
+        <Route path="/store">
           <Store />
         </Route>
 
-        <Route exact path="/product/:id">
+        <Route path="/product/:id">
           <Product />
         </Route>
 

@@ -3,22 +3,10 @@ import ProductCard from "../components/ProductCard";
 
 import "../styles/Store.css";
 
-import placaDeVideo from "../assets/placadevideo.jpg";
+import mockObjects from "../objects/simplified.json";
 
 function Store() {
-  const produtos = [
-    {
-      id: 1,
-      name: "GPU Nvidia Geforce 700 series 2GB",
-      price: "700",
-    },
-
-    {
-      id: 2,
-      name: "GPU Quase Geforce 1005 1GB",
-      price: "300",
-    },
-  ];
+  const produtos = mockObjects.objects;
 
   return (
     <main id="main-store">
@@ -27,15 +15,15 @@ function Store() {
         <ul className="filter-list">
           <li>
             <input type="checkbox" name="motherboards" />
-            <label for="motherboards">Motherboards</label>
+            <label htmlFor="motherboards">Motherboards</label>
           </li>
           <li>
             <input type="checkbox" name="gpus" />
-            <label for="gpus">GPUs</label>
+            <label htmlFor="gpus">GPUs</label>
           </li>
           <li>
             <input type="checkbox" name="cpus" />
-            <label for="cpus">CPUs</label>
+            <label htmlFor="cpus">CPUs</label>
           </li>
         </ul>
       </div>
@@ -44,7 +32,7 @@ function Store() {
         {produtos.map((produto) => 
           <ProductCard
             id={produto.id}
-            productImage={placaDeVideo}
+            productImage={produto.thumbnail}
             productName={produto.name}
             productPrice={produto.price}
           />

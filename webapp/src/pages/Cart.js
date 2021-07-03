@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 import "../styles/Cart.css";
 
-import placaDeVideo from "../assets/placadevideo.jpg"
-
 function Cart() {
+
+  const placaDeVideo = "images/placadevideo.jpg";
+
   return (
       <main id="cart-panel">
 

@@ -1,0 +1,16 @@
+{
+    "objects": [
+        {
+            "id": "1234",
+            "thumbnail": "/images/placadevideo.jpg",
+            "name": "GPU Nvidia Geforce 700 series 2GB",
+            "price": 700.00
+        },
+        {
+            "id": "4321",
+            "thumbnail": "/images/placadevideo2.png",
+            "name": "GPU Quase Geforce 1005 series 1GB",
+            "price": 300.00
+        }
+    ]
+}

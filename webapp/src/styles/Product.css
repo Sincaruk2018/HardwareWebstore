@@ -26,6 +26,10 @@
     max-height: 100px;
 }
 
+#product-gallery img:hover{
+    cursor: pointer;
+}
+
 #image-preview img{
     max-height: 100%;
 }

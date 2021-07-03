@@ -3,11 +3,12 @@ import {Link} from 'react-router-dom';
 
 import "../styles/Home.css";
 
-import bannerPlacaDeVideo from "../assets/banner-placadevideo.jpg";
-import bannerPlacaMae from "../assets/banner-placamae.jpg";
-import bannerCPU from "../assets/banner-cpu.jpeg";
-
 function Home() {
+
+  const bannerPlacaDeVideo = "images/banner-placadevideo.jpg";
+  const bannerPlacaMae = "images/banner-placamae.jpg";
+  const bannerCPU = "images/banner-cpu.jpeg";
+
   return (
     <main className="stand">
       <div className="category">

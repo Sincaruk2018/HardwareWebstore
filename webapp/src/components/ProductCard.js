@@ -11,7 +11,7 @@ function ProductCard({id, productImage, productName, productPrice}){
         <Link to={"/product/" + id} className="card">
           <img className="card-image" src={productImage} alt="product" />
           <span className="card-name">{productName}</span>
-          <span className="card-price">{"R$ " + productPrice}</span>
+          <span className="card-price">{"R$ " + productPrice.toFixed(2)}</span>
         </Link>
     );
 }
