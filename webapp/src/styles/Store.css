@@ -1,0 +1,14 @@
+#main-store{
+    min-width: 98vw;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.stand-store{
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}

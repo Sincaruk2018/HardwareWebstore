@@ -1,0 +1,9 @@
+#main-payment{
+    font-size: 1.5em;
+    min-height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

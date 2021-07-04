@@ -1,0 +1,32 @@
+#main-profile{
+    max-width: 50vw;
+    margin: 150px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+#main-profile > * {
+    margin: 20px 0;
+}
+
+#profile-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile-buttons button{
+    width: 40%;
+    margin: 10px;
+}
+
+.profile-user-input{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}

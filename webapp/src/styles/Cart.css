@@ -1,0 +1,117 @@
+#cart-panel{
+    width: 80vw;
+    background: gainsboro;
+    margin-bottom: 50px;
+}
+
+#cart-head{
+    padding: 20px;
+    font-size: 3em;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#cart-end{
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: var(--dark-accept-color);
+}
+
+.cart-item{
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.cart-image{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.item-infos{
+    flex: 3 1 auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.cart-infos{
+    flex: 1 1 25%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items:  flex-end;
+    border-left: 1px dashed black;
+    padding-left: 20px;
+}
+
+.item-title{
+    font-size: 1.8em;
+    margin-bottom: auto;
+}
+
+.item-price{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.quantity-control{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.quantity-control > * {
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+}
+
+.control-btn{
+    border: 2px solid black;
+}
+
+.remove-btn{
+    width: 100%;
+    height: 25%;
+    font-size: 1.2em;
+}
+
+.item-subtotal{
+    flex-basis: 50%;
+
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.item-subtotal-valor{
+    font-size: 1.8em;
+    margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+{
+    "objects": [
+        {
+            "id": "1234",
+            "thumbnail": "/images/placadevideo.jpg",
+            "name": "GPU Nvidia Geforce 700 series 2GB",
+            "price": 700.00,
+            "description": "Interface: PCI-E 2.0 x 8 | GPU: GeForce® GT 710 | Core Clock: 954 MHz | Processo tecnológico: 28 nm | Clock efetivo: 5010 MHz | Tamanho: 2GB | Interface: 64 bit | Tipo: DDR5 | API 3D: DirectX 12, OpenGL 4.5 | Portas: 1 x HDMI, 1 x Dual-link DVI-I |",
+            "photos": [
+                "/images/placadevideo.jpg",
+                "/images/placadevideo2.png"
+            ]
+        },
+        {
+            "id": "4321",
+            "thumbnail": "/images/placadevideo2.png",
+            "name": "GPU Quase Geforce 1005 series 1GB",
+            "price": 300.00,
+            "description": "Placa de video fajuta mas faz seu papel, custo benefício médio pra quem busca um preço mais acessível",
+            "photos": [
+                "/images/placadevideo2.png"
+            ]
+        }
+    ]
+}
