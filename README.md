@@ -21,16 +21,16 @@ Grupo de WebDev
 **Requirements:**
 
 - There will be 2 types of users, Clients and Administrators.
-- Admin record will include name, ID, phone number andemail address.
-- Eachcustomerwillneedtofillaformthatincludesname,ID,address,phone
-    number and email address.
-- Productswillincludename,ID,photo,description,price,quantityinstockand
+- Admin record will include name, ID, phone number and email address.
+- Each customer will need to fill a form that includes name, ID, address, phone
+    number and email address.s
+- Products will include name, ID, photo, description, price, quantity in stock and
     quantity sold.
-- Productsareselected,theirquantitychosenandareincludedinashopping
+- Products are selected, their quantity chosen and are included in a shopping
     cart. Products are purchased using a credit card number.
 - Carts are emptied only on payment or by customers.
 - Administrators can create/read/update/delete new products.
-- Wewillhaveapurchasehistoryforthecustomer.Sotheycanseewhatthey
+- We will have a purchase history for the customer. So they can see what they
     bought in our store.
 
 **Project Description:**
@@ -46,26 +46,26 @@ We will implement a Hardware Store. We will implementsome functionalities:
 
 **Comments About the Code:**
 
-We are at the first milestone, so we don’t have enoughcode to comment.
+We are at the first milestone, so we don’t have enough code to comment.
 
 **Test Plan:**
 
-We are at the first milestone, so we don’t have enoughdata to start testing our store.
+We are at the first milestone, so we don’t have enough data to start testing our store.
 
 **Test Results:**
 
 
-Weareatthefirstmilestone andwe don’thaveatestplan,soit’sobviousthatwe
+We are at the first milestone and we don’t have a test plan, so it’s obvious that we
 don’t have the test results.
 
 **Build Procedures:**
 
-We are at thefirst milestone, sowe don’thave enough data orcodeto instruct
+We are at the first milestone, so we don’t have enough data or code to instruct
 someone how to run our code.
 
 **Problems:**
 
-Weareatthefirstmilestone,sowearethinkingaboutwhatwewillimplementand
+We are at the first milestone, so we are thinking about what we will implement and
 how, so we didn’t have any problem.
 
 **Comments:**
