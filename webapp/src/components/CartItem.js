@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../styles/CartItem.css';
 
-function CartItem({image, title, price}) {
+function CartItem({id, image, title, price, amount, changeAmount, deleteItem}) {
 
-    const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(amount);
+
+    useEffect(()=>{
+      changeAmount(id, quantity)
+    },[quantity]);
 
     return(
         <div className="cart-item">
@@ -22,7 +26,7 @@ function CartItem({image, title, price}) {
             </div>
 
             <div className="cart-infos">
-              <button className="remove-btn">Remover do Carrinho</button>
+              <button className="remove-btn" onClick={() => deleteItem(id)}>Remover do Carrinho</button>
               <div className="item-subtotal">
                 <span>Subtotal do Produto</span>
                 <span className="item-subtotal-valor">${price * quantity}</span>

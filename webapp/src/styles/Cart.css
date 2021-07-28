@@ -29,3 +29,9 @@
     color: white;
     background-color: var(--dark-accept-color);
 }
+
+#cart-no-item{
+    height: 70vh;
+    font-size: 4em;
+    color: var(--dark-primary-color);
+}
