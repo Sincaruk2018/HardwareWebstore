@@ -31,6 +31,7 @@ function Store() {
       <div className="stand-store">
         {produtos.map((produto) => 
           <ProductCard
+            key={produto.id}
             id={produto.id}
             productImage={produto.thumbnail}
             productName={produto.name}

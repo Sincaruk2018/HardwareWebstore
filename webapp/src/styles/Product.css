@@ -73,3 +73,7 @@
     padding: 20px;
     text-align: center;
 }
+
+.button-to-cart:hover{
+    cursor: pointer;
+}

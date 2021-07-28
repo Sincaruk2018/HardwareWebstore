@@ -46,31 +46,42 @@ We will implement a Hardware Store. We will implementsome functionalities:
 
 **Comments About the Code:**
 
-We are at the first milestone, so we don’t have enough code to comment.
+Our code doesn't have comments at the moment, cart page and components might be a bit confusing.
 
 **Test Plan:**
 
-We are at the first milestone, so we don’t have enough data to start testing our store.
+At the moment only testing realized is by clicking buttons and links in the webapp, server is not finished yet.
 
 **Test Results:**
 
-
-We are at the first milestone and we don’t have a test plan, so it’s obvious that we
-don’t have the test results.
+The front end of our webstore seems to be working properly.
 
 **Build Procedures:**
 
-We are at the first milestone, so we don’t have enough data or code to instruct
-someone how to run our code.
+Front-end:
+
+
+    cd webapp
+    npm install
+    npm run start
+
+
+\(Our server does nothing at the moment\)
+Back-end:
+
+
+    cd server
+    yarn install
+    yarn dev
+
+
 
 **Problems:**
 
-We are at the first milestone, so we are thinking about what we will implement and
-how, so we didn’t have any problem.
+In front-end not all features are covered yet, we are missing: admin page to manage store products, login and sign in page, filter products by category, and listing purchase history for costumers
+
+In back-end it configuring MongoDB took a long time, also we couldn't make server functionalities in time
 
 **Comments:**
 
-We are at the first milestone, so we don’t have anycomments to add here.
-
-
-
+Our project is basically unfinished by the time the deadline arrives but can be better developed with some more time

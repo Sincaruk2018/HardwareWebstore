@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import "../styles/Product.css";
 
@@ -16,6 +16,42 @@ function Product() {
 
   function changePreviewImage(source){
     setPreviewImage(source);
+  }
+
+  function addItemToCart(item){
+    const {id, thumbnail, name, price} = item;
+    const itemObj = {
+      id: id,
+      thumbnail: thumbnail,
+      name: name,
+      price: price,
+      quantity: 1
+    }
+
+    let cart = localStorage.getItem("cart");
+
+    if (cart !== null){
+      let cartJSON = JSON.parse(cart);
+      let itemIsInCart = false;
+
+      for (let index = 0; index < cartJSON.length; index++) {
+        if (cartJSON[index].id === id) {
+          itemIsInCart = true;
+          cartJSON[index].quantity++;
+          break;
+        }
+      }
+
+      if(!itemIsInCart){
+        cartJSON.push(itemObj);
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cartJSON));
+    } else {
+      localStorage.setItem("cart", JSON.stringify([itemObj]));
+    }
+
+    alert("Item adicionado ao carrinho!");
   }
 
   return product !== undefined ? (
@@ -39,9 +75,9 @@ function Product() {
         </div>
         <div className="bottom-info">
           <span className="product-price">{"R$ " + product.price.toFixed(2)}</span>
-          <Link to="/cart" className="button-to-cart">
+          <button className="button-to-cart" onClick={() => addItemToCart(product)}>
             Adicionar ao carrinho
-          </Link>
+          </button>
         </div>
       </div>
     </main>

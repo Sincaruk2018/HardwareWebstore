@@ -1,106 +1,104 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "../styles/Cart.css";
 
+import CartItem from "../components/CartItem";
+
 function Cart() {
+  const [items, setItems] = useState([]);
+  const [total, setTotal] = useState(0);
 
-  const placaDeVideo = "images/placadevideo.jpg";
+  useEffect(() => {
+    const storageContent = localStorage.getItem("cart");
+    if (storageContent === null) {
+      return;
+    }
+    const cartItens = JSON.parse(storageContent);
 
-  return (
-      <main id="cart-panel">
+    setItems(cartItens);
+  }, []);
 
-        <div id="cart-head">
-          <span>TOTAL</span>
-          <span>$800</span>
-        </div>
+  function calculateTotal(){
+    let obj = localStorage.getItem("cart");
+    if (obj === null) {
+      setTotal(0);
+      return
+    }
+    const cart = JSON.parse(obj);
 
-        <div id="cart-body">
+    let sum = 0;
+    for (let index = 0; index < cart.length; index++) {
+      const subtotal = cart[index].price * cart[index].quantity;
+      sum += subtotal;
+    }
 
-          <div className="cart-item">
-            <img className="cart-image" src={placaDeVideo} alt={""} />
+    setTotal(sum);
+  }
 
-            <div className="item-infos">
-              <span className="item-title">
-                Placa de vídeo Nvidia 700 Series 2GB
-              </span>
-              <span className="item-price">$200</span>
-              <div className="quantity-control">
-                  <button className="control-btn" >&minus;</button>
-                  <span className="centered">01</span>
-                  <button className="control-btn" >&#43;</button>
-              </div>
-            </div>
+  function setAmount(productId, currentAmount) {
+    let cart = items;
 
-            <div className="cart-infos">
-              <button className="remove-btn">Remover do Carrinho</button>
-              <div className="item-subtotal">
-                <span>Subtotal do Produto</span>
-                <span className="item-subtotal-valor">$200</span>
-              </div>
-            </div>
+    for (let index = 0; index < cart.length; index++) {
+      if (cart[index].id === productId) {
+        if (currentAmount <= 0) {
+          cart.splice(index, 1);
+          setItems(items.filter((current) => {return current.id !== productId}));
+        } else {
+          cart[index].quantity = currentAmount;
+        }
+        break;
+      }
+    }
 
-          </div>
+    localStorage.setItem("cart", JSON.stringify(cart));
+    calculateTotal();
+  }
 
-          <div className="cart-item">
-            <img className="cart-image" src={placaDeVideo} alt={""} />
+  function removeFromCart(productId){
+    let cart = items;
+    for (let index = 0; index < cart.length; index++) {
+      if (cart[index].id === productId) {
+        cart.splice(index, 1);
+        break;
+      }
+      
+    }
+    setItems(items.filter((current) => {return current.id !== productId}));
+    localStorage.setItem("cart", JSON.stringify(cart));
+    calculateTotal();
+  }
 
-            <div className="item-infos">
-              <span className="item-title">
-                Placa de vídeo Nvidia 700 Series 2GB
-              </span>
-              <span className="item-price">$200</span>
-              <div className="quantity-control">
-                  <button className="control-btn" >&minus;</button>
-                  <span className="centered">01</span>
-                  <button className="control-btn" >&#43;</button>
-              </div>
-            </div>
+  return items.length > 0 ? (
+    <main id="cart-panel">
+      <div id="cart-head">
+        <span>TOTAL</span>
+        <span>${total}</span>
+      </div>
 
-            <div className="cart-infos">
-              <button className="remove-btn">Remover do Carrinho</button>
-              <div className="item-subtotal">
-                <span>Subtotal do Produto</span>
-                <span className="item-subtotal-valor">$200</span>
-              </div>
-            </div>
+      <div id="cart-body">
+        {items.map((current) => (
+          <CartItem
+            key={current.id}
+            id={current.id}
+            image={current.thumbnail}
+            title={current.name}
+            price={current.price}
+            amount={current.quantity}
+            changeAmount={setAmount}
+            deleteItem={removeFromCart}
+          />
+        ))}
+      </div>
 
-          </div>
-
-          <div className="cart-item">
-            <img className="cart-image" src={placaDeVideo} alt={""} />
-
-            <div className="item-infos">
-              <span className="item-title">
-                Placa de vídeo Nvidia 700 Series 2GB
-              </span>
-              <span className="item-price">$200</span>
-              <div className="quantity-control">
-                  <button className="control-btn" >&minus;</button>
-                  <span className="centered">01</span>
-                  <button className="control-btn" >&#43;</button>
-              </div>
-            </div>
-
-            <div className="cart-infos">
-              <button className="remove-btn">Remover do Carrinho</button>
-              <div className="item-subtotal">
-                <span>Subtotal do Produto</span>
-                <span className="item-subtotal-valor">$200</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div id="cart-end" className="centered">
-          <Link to="/payment">
-            Finalizar Compra
-          </Link>
-        </div>
-
-      </main>
+      <div id="cart-end" className="centered">
+        <Link to="/payment">Finalizar Compra</Link>
+      </div>
+    </main>
+  ) : (
+    <main id="cart-no-item" className="centered">
+      <h1>Carrinho Vazio</h1>
+    </main>
   );
 }
 
