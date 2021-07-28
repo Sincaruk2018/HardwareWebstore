@@ -66,6 +66,7 @@ Front-end:
     npm run start
 
 
+\(Our server does nothing at the moment\)
 Back-end:
 
 
