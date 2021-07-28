@@ -48,8 +48,10 @@ function Product() {
 
       localStorage.setItem("cart", JSON.stringify(cartJSON));
     } else {
-      localStorage.setItem("cart", JSON.stringify([itemObj]))
+      localStorage.setItem("cart", JSON.stringify([itemObj]));
     }
+
+    alert("Item adicionado ao carrinho!");
   }
 
   return product !== undefined ? (
